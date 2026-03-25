@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main(){
+int n,i;
+printf("Adj meg egy egész számot: n=");
+scanf("%d", &n);
+
+for (i = 0; i <= n; i++){
+  printf("%d ", i);
+
+    if (i != n)
+    {
+        printf("-> ");
+    }
+}
+    return  0;
+}
