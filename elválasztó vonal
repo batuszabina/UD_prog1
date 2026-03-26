@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+    int i;
+
+    printf("hello\n");
+    
+    for (i = 0; i < 40; i++) {
+        putchar('-');
+    }
+
+    printf("\nworld\n");
+    return 0;
+}
