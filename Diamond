@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int main() {
+    int x;
+    printf("Add meg a gyémánt méretét: ");
+    scanf("%d", &x);
+    if(x<=0 || x%2==0) {
+        printf("Hibas méret! Kérem adjon meg egy pozitív páratlan számot.\n");
+        return 1;
+    }
+    int i, j;
+
+    for(i=1; i<=x; i+=2) {
+        for(j=0; j<(x-i)/2; j++) {
+            printf(" ");
+        }
+        for(j=0; j<i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for(i=x-2; i>=1; i-=2) {
+        for(j=0; j<(x-i)/2; j++) {
+            printf(" ");
+        }
+        for(j=0; j<i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
