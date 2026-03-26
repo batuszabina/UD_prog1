@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int fib(int n) {
+    int a = 0, b = 1;   /* F(0), F(1) */
+    for (int i = 0; i < n; i++) {
+        int next = a + b;
+        a = b;
+        b = next;
+    }
+    return a;
+}
+
+int main(void) {
+    for (int i = 0; i < 100; i++) {
+        printf("%2d: %d\n", i, fib(i));
+    }
+    return 0;
+}
