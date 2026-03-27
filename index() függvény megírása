@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int index_of(int arr[], int size, int value) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == value) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main(void) {
+    int tomb[] = {1, 5, 7, 9, 11};
+    int meret = sizeof(tomb) / sizeof(tomb[0]);
+    int keresett = 7;
+
+    int idx = index_of(tomb, meret, keresett);
+
+    if (idx != -1)
+        printf("%d indexen van a %d elem.\n", idx, keresett);
+    else
+        printf("%d nincs a tombben.\n", keresett);
+
+    return 0;
+}
