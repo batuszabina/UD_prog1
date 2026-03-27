@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(void){
+    int ketto = 'C' - 'A';   /* 67 - 65 = 2  */
+    int nulla = 'A' - 'A';   /* 0             */
+    int hat   = 'G' - 'A';   /* 71 - 65 = 6   */
+    printf("%d%d%d%d\n", ketto, nulla, ketto, hat);
+
+    return 0;
+}
