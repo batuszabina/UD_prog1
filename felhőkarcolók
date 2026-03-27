@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int kulonbseg_osszeg(int tomb[], int meret)
+{
+    int osszeg = 0;
+    for (int i = 0; i < meret - 1; i++)
+    {
+        osszeg += abs(tomb[i] - tomb[i + 1]);
+    }
+    return osszeg;
+}
+
+int main(void) {
+    int felhok[] = {2, 4, 8, 3, 9, 7, 1};
+    int n = sizeof(felhok) / sizeof(felhok[0]);
+
+    int eredmeny = kulonbseg_osszeg(felhok, n);
+    printf("Osszeg: %d\n", eredmeny);
+
+    return 0;
+}
