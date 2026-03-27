@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int contains(int arr[], int size, int value)
+{
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] == value)
+        {
+            return 1;    // igaz
+        }
+    }
+    return 0;           // hamis
+}
+
+int main(void)
+{
+    int tomb[] = {1, 5, 7, 9, 11};
+    int meret = sizeof(tomb) / sizeof(tomb[0]);
+    int keresett = 7;
+
+    if (contains(tomb, meret, keresett))
+        printf("%d benne van a tömbben.\n", keresett);
+    else
+        printf("%d nincs benne a tömbben.\n", keresett);
+
+    return 0;
+}
